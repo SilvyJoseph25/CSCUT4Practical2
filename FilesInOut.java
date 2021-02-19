@@ -13,7 +13,31 @@ import java.lang.Number;
 public class FilesInOut {
 
     public static void main(String[] args) {
+    	
         // Replace this with statements to set the file name (input) and file name (output).
+    	
+    	System.out.println("Supply filename for input:");
+    	try
+    		{
+    		//inputFileName=in.nextLine();
+    		File inputFile=new File("\"C:\\Users\\caran\\Downloads\\CSCUT4Practical2-main\\CSCUT4Practical2-main\\input.txt\"");
+    		Scanner inFile=new Scanner(inputFile);
+    		}
+    	catch (IOException e)
+    		{
+    		System.err.println("IOException : " + e.getMessage() + "not found");
+    		}
+    	
+    	System.out.println("Supply filename for output:");
+    	try
+    		{
+    		outputFile=new PrintWriter(filename);
+    		}
+    	catch (FileNotFoundException e)
+    		{
+    		System.err.println("FileNotFoundException:" + e.getMessage() + " not openable");
+    		System.exit(0);
+    		}
         // Initially it will be easier to hardcode suitable file names.
 
         // Set up a new Scanner to read the input file.
